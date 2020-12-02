@@ -12,6 +12,7 @@ module.exports = {
       return context.models.Pet.findMany(__argumentsFromClient.input);
     },
     pet(_initialValue, __argumentsFromClient, context) {
+      console.log("Query => pet");
       return context.models.Pet.findOne(__argumentsFromClient.input);
     },
   },
@@ -20,14 +21,26 @@ module.exports = {
       return ctx.models.Pet.create(input);
     },
   },
-  // Pet: {
-  //   img(pet) {
-  //     return pet.type === "DOG"
-  //       ? "https://placedog.net/300/300"
-  //       : "http://placekitten.com/300/300";
-  //   },
-  // },
-  // User: {
+  Pet: {
+    // Field level resolver
+    // First argument is always what the type is IE: Pet
+    owner(pet, __, context) {
+      console.log("PET => owner");
+      return context.models.User.findOne();
+    },
 
-  // }
+    // img(pet) {
+    //   return pet.type === "DOG"
+    //     ? "https://placedog.net/300/300"
+    //     : "http://placekitten.com/300/300";
+    // },
+  },
+  User: {
+    pets(user, __, ctx) {
+      console.log("User => pets");
+      // return ctx.models.Pet.findMany({user: user.id})
+      return ctx.models.Pet.findMany({});
+      // return this.pets;
+    },
+  },
 };

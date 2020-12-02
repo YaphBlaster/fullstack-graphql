@@ -8,25 +8,29 @@
       "id": "1",
       "createdAt": 1,
       "name": "name1",
-      "type": "type1"
+      "type": "type1",
+      "user": "jBWMVGjm50l6LGwepDoty"
     },
     {
       "id": "2",
       "createdAt": 2,
       "name": "name2",
-      "type": "type2"
+      "type": "type2",
+      "user": "jBWMVGjm50l6LGwepDoty"
     },
     {
       "id": "OBUTypj8EARamD_57V4cF",
       "createdAt": 1606691120621,
       "name": "Schrodinger",
-      "type": "Cat"
+      "type": "Cat",
+      "user": "jBWMVGjm50l6LGwepDoty"
     },
     {
       "id": "utE4AzlebSgwmaOHOE-Ae",
       "createdAt": 1606691421374,
       "name": "Schrodinger",
-      "type": "Cat"
+      "type": "Cat",
+      "user": "jBWMVGjm50l6LGwepDoty"
     }
   ]
 }

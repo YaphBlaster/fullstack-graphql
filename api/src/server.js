@@ -6,7 +6,8 @@ const { models, db } = require("./db");
 const server = new ApolloServer({
   // this is how you can pass information to your resolvers
   context() {
-    return { models, db };
+    const user = models.User.findOne();
+    return { models, db, user };
   },
   typeDefs,
   resolvers,
